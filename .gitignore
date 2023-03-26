@@ -1,0 +1,5 @@
+.env
+.node_modules
+# NPM
+/node_modules
+/dist
