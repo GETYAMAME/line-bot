@@ -23,7 +23,14 @@ const openai = new OpenAIApi(configuration);
 export async function ask(content: string, model = "gpt-3.5-turbo-0301") {
   const response = await openai.createChatCompletion({
     model: model,
-    messages: [{ role: "user", content: content }],
+    messages: [
+      {
+        role: "system",
+        content:
+          "あなたは社員に対してアドバイスを行うビジネスコーチです。相手の話を聞いて内省を促してください。",
+      },
+      { role: "user", content: content },
+    ],
   });
 
   const answer = response.data.choices[0].message?.content;
