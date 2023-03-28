@@ -4,11 +4,6 @@
   "description": "",
   "main": "index.js",
   "type": "commonjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "start": "node dist/index.js"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -23,5 +18,10 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js"
   }
 }
