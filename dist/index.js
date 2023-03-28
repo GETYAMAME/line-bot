@@ -30,7 +30,7 @@ const configuration = new openai_1.Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new openai_1.OpenAIApi(configuration);
-// OpenAIへの接続
+// OpenAIへの接続　修正箇所
 function ask(content, model = "gpt-4") {
     var _a;
     return __awaiter(this, void 0, void 0, function* () {
