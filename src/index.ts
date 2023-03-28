@@ -20,14 +20,13 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 // OpenAIへの接続
-export async function ask(content: string, model = "gpt-3.5-turbo-0301") {
+export async function ask(content: string, model = "gpt-4") {
   const response = await openai.createChatCompletion({
     model: model,
     messages: [
       {
         role: "system",
-        content:
-          "あなたは社員に対してアドバイスを行うビジネスコーチです。相手の話を聞いて内省を促してください。",
+        content: process.env.SYSTEM_CHARACTER,
       },
       { role: "user", content: content },
     ],
