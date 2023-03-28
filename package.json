@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm install typescrip",
     "build": "tsc"
   },
   "author": "",
