@@ -19,7 +19,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-// OpenAIへの接続
+// OpenAIへの接続　修正箇所
 export async function ask(content: string, model = "gpt-4") {
   const response = await openai.createChatCompletion({
     model: model,
